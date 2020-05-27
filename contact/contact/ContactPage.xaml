@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="contact.ContactPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="0,0,0,100">
+                <Label Text="Имя" FontSize="{StaticResource Key=fontSize}" TextColor="{StaticResource Key=textColor}" />
+                <Entry Text="{Binding Name}" Placeholder="Имя" FontSize="{StaticResource Key=fontSize}" TextColor="{StaticResource Key=textColor}" />
+                <Label Text="Телефон" FontSize="{StaticResource Key=fontSize}" TextColor="{StaticResource Key=textColor}"/>
+                <Entry Text="{Binding Phone}" Placeholder="Введите телефон" Keyboard="Telephone" FontSize="{StaticResource Key=fontSize}" TextColor="{StaticResource Key=textColor}"/>
+                <Label Text="Email" FontSize="{StaticResource Key=fontSize}" TextColor="{StaticResource Key=textColor}"/>
+                <Entry Text="{Binding Email}" Placeholder="Почта" Keyboard="Email" FontSize="{StaticResource Key=fontSize}" TextColor="{StaticResource Key=textColor}" />
+                <StackLayout>
+                    <Button Text="Сохранить" Clicked="SaveButton_Clicked" TextColor="{StaticResource Key=textColor}"  BackgroundColor="{StaticResource Key=backColor}" BorderColor="{StaticResource Key=borderclr}" />
+                    <Button Text="Удалить" Clicked="DeleteButton_Clicked" TextColor="{StaticResource Key=textColor}"  BackgroundColor="{StaticResource Key=backColor}" BorderColor="{StaticResource Key=borderclr}"/>
+                    <Button Text="Добавть" Clicked="CancelButton_Clicked" TextColor="{StaticResource Key=textColor}"  BackgroundColor="{StaticResource Key=backColor}" BorderColor="{StaticResource Key=borderclr}" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
